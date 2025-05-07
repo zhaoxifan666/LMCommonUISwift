@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   #
   
   spec.name         = "LMCommonUISwift"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "LMCommonUISwift."
   
   # This description is used to generate tags and improve search results.
@@ -21,17 +21,17 @@ Pod::Spec.new do |spec|
                       Swift 的通用UI组件 LMCommonUISwift.
                    DESC
 
-  spec.homepage     = "https://git.aqara.com/aqara-app/sdk/commonui/commonuiswift"
+  spec.homepage     = "https://github.com/zhaoxifan666/LMCommonUISwift"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
   spec.license      = "MIT"
-  spec.author       = { "Hao" => "ruihao.gao@aqara.com" }
+  spec.author       = { "zhaoxifan" => "xifan.zhao@aqara.com" }
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
   
-  spec.ios.deployment_target = "12.0"
+  spec.platform     = :ios, "12.0"
   spec.swift_version = '5.0'
   # spec.platform     = :ios, "5.0"
   
@@ -49,7 +49,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
   
-  spec.source       = { :git => "https://git.aqara.com/aqara-app/sdk/commonui/commonuiswift/lmcommonuiswift.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/zhaoxifan666/LMCommonUISwift.git", :tag => "#{spec.version}" }
   
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -59,13 +59,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
   
-  if ENV['sdk']
-    spec.vendored_frameworks = "SourceSDK/*.framework"
-  else
-    spec.header_dir    = "LMCommonUISwift"
-    spec.source_files  = "LMCommonUISwift/LMCommonUISwift", "LMCommonUISwift/LMCommonUISwift/**/*.{h,m,swift}"
-    spec.public_header_files = "LMCommonUISwift/LMCommonUISwift/**/*.h"
-  end
+  spec.vendored_frameworks = "LMCommonUISwift.framework"
   
   spec.dependency "LMFramework"
   spec.dependency "LMSwiftCore"
@@ -80,7 +74,7 @@ Pod::Spec.new do |spec|
   spec.dependency "TTTAttributedLabel"
   
   #spec.prefix_header_file = 'LMCommonUISwift/LMCommonUISwift/PrefixHeader.pch'
-  spec.resource =  'LMCommonUISwift/LMCommonUISwift/LMCommonUISwift.bundle'
+  spec.resource =  'LMCommonUISwift.bundle'
   
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
