@@ -1,0 +1,6 @@
+framework module LMCommonUISwift {
+  umbrella header "LMCommonUISwift.h"
+  export *
+
+  module * { export * }
+}
